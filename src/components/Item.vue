@@ -7,7 +7,7 @@
              class="button button_basket-action button_basket-remove"
              @click="removeFromBasket(name)">REMOVE</div>
         <div class="item__name">{{ name }}</div>
-        <div class="item__price">{{ price }}$</div>
+        <div class="item__price">{{ price.toFixed(2) }}$</div>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
   name: 'Item',
   props: {
     name: String,
-    price: String,
+    price: Number,
   },
   computed: {
     isInBasket() {
