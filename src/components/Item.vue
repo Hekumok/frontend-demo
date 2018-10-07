@@ -38,11 +38,7 @@ export default {
     padding: 5px;
     margin: 5px;
 }
-.button {
-    cursor: pointer;
-}
 .button_basket-action {
-    padding: 15px;
     float: right;
 }
 .button_basket-add {

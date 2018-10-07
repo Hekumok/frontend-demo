@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style>
-
+.button {
+    cursor: pointer;
+    padding: 15px;
+}
 </style>
