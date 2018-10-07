@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import pathify, { make } from 'vuex-pathify';
+import pathify from 'vuex-pathify';
 import ItemsApi from '@/services/api/Items';
 import utils from '@/utils';
 
@@ -23,7 +23,6 @@ const getters = {
 };
 
 const mutations = {
-  ...make.mutations(state),
   ADD_ITEMS(state, items) {
     state.itemsData.push(...items);
   },
