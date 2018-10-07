@@ -3,6 +3,6 @@ export default {
     return (Math.random() * (max - min)) + min;
   },
   generatePrice() {
-    return this.getRandom(1000, 10000).toFixed(2);
+    return +this.getRandom(1000, 10000).toFixed(2);
   },
 };
