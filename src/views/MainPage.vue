@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page main-page">
         <items-list :items="items" />
     </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      updateTime: 5000,
+      updateTime: 60000,
       timerId: null,
     };
   },
@@ -41,8 +41,13 @@ export default {
     this.runUpdateTimer();
   },
   beforeRouteEnter(to, from, next) {
-    store.dispatch('loadItems')
-      .then(() => next());
+    if (store.getters.items.length) {
+      store.dispatch('loadItems');
+      next();
+    } else {
+      store.dispatch('loadItems')
+        .then(() => next());
+    }
   },
   beforeRouteLeave(to, from, next) {
     clearTimeout(this.timerId);
