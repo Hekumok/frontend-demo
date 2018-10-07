@@ -24,6 +24,9 @@ const mutations = {
       state.items.splice(index, 1);
     }
   },
+  CLEAR(state) {
+    state.items = [];
+  },
 };
 
 const actions = {
@@ -32,6 +35,9 @@ const actions = {
   },
   remove({ commit }, payload) {
     commit('REMOVE_ITEM', payload);
+  },
+  clear({ commit }) {
+    commit('CLEAR');
   },
 };
 
