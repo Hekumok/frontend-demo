@@ -13,6 +13,7 @@ module.exports = {
     'import/extensions': ['errors', 'never'],
     'no-param-reassign': ['error', { props: false }],
     'no-shadow': ['error', { 'allow': ['state', 'getters'] }],
+    'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
   },
   parserOptions: {
     parser: 'babel-eslint',
